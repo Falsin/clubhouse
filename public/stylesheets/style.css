@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#chat {
+  width: 200px;
+}
+#chat form {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,10 @@
+<header>
+  This is a header!
+  <% if (user) { %>
+    <a href="/logout" >Log out</a>
+  <% } else if (user !== null) { %>
+    <a href="/login">Log in</a>
+    or
+    <a href="/sign-up">Sign up</a>
+  <% } %>
+</header>

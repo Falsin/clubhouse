@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+  <%- include('header'); %>
+
+  <div id="chat">
+    <% if (user) { %> 
+      <% messages.forEach(elem => { %>
+        <li><%- elem.title %></li>
+        <li><%- elem.time %></li>
+        <li><%- elem.text %></li>
+        <li><%- elem.author.username %></li>
+      <% }) %>
+
+      <form action="" method="post">
+        <label>Message title
+          <input type="text" name="title">
+        </label>
+        <label>Text:
+          <input type="text" name="text">
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+    <% } else { %>
+      <% messages.forEach(elem => { %>
+        <li><%- elem.title %></li>
+        <li><%- elem.time %></li>
+        <li><%- elem.text %></li>
+      <% }) %>
+
+      <p>You must log in to write a message</p>
+    <% } %> 
+  </div>
+</body>
+</html>

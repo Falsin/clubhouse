@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Homepage</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <% if (user) { %> 
+      <%- include('header'); %> 
+      <h1>Welcome <%= user.firstName %> <%= user.lastName %></h1>
+    <% } else { %>
+      <%- include('header'); %> 
+      <h1>You logout!</h1>
+    <% } %>
+    </body>
+</html>
